@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INKPULSE | Bespoke Tattoo & Fine Art Atelier</title>
+  <meta name="description" content="Premier custom tattoo atelier and fine body modification studios in Chennai and Coimbatore. Specializing in micro-realism, sacred geometry, fine line, and bespoke jewelry." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#080808',
+            graphite: '#121212',
+            cardbg: 'rgba(18, 18, 18, 0.75)',
+            gold: {
+              300: '#EBD496',
+              400: '#D4AF37',
+              500: '#C5A028',
+              glow: 'rgba(212, 175, 55, 0.15)'
+            }
+          },
+          fontFamily: {
+            display: ['Cinzel', 'serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #080808;
+      color: #E2E8F0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFFFFF 0%, #D4AF37 50%, #8A7322 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-border-glow {
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .gold-border-glow:hover {
+      border-color: rgba(212, 175, 55, 0.8);
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.18);
+    }
+  </style>
+</head>
+<body class="selection:bg-gold-400 selection:text-black">
+
+  <!-- ================= NAVIGATION ================= -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-[#080808]/85 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+      
+      <a href="#home" class="flex items-center gap-3 tracking-[0.25em] text-2xl font-bold font-display uppercase group">
+        <span class="text-white group-hover:text-gold-400 transition-colors duration-300">Ink</span><span class="gold-gradient-text">Pulse</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-gold-400 inline-block animate-pulse"></span>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-8 text-[13px] tracking-[0.18em] uppercase font-medium text-neutral-400">
+        <a href="#home" class="hover:text-gold-400 transition-colors duration-200">Home</a>
+        <a href="#about" class="hover:text-gold-400 transition-colors duration-200">Atelier</a>
+        <a href="#services" class="hover:text-gold-400 transition-colors duration-200">Services</a>
+        <a href="#gallery" class="hover:text-gold-400 transition-colors duration-200">Portfolio</a>
+        <a href="#reviews" class="hover:text-gold-400 transition-colors duration-200">Testimonials</a>
+        <a href="#aftercare" class="hover:text-gold-400 transition-colors duration-200">Aftercare</a>
+      </div>
+
+      <div class="hidden lg:flex items-center">
+        <a href="#contact" class="px-6 py-2.5 text-xs font-semibold tracking-[0.2em] uppercase border border-gold-400/60 text-gold-400 hover:bg-gold-400 hover:text-black transition-all duration-300 rounded-sm">
+          Reserve Session
+        </a>
+      </div>
+
+      <button id="menu-btn" class="lg:hidden text-2xl text-neutral-300 hover:text-gold-400 focus:outline-none" aria-label="Toggle Menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-obsidian/95 backdrop-blur-2xl border-b border-neutral-800 px-6 py-8">
+      <div class="flex flex-col gap-6 text-sm tracking-[0.2em] uppercase font-medium text-neutral-300">
+        <a href="#home" class="hover:text-gold-400 transition-colors mobile-link">Home</a>
+        <a href="#about" class="hover:text-gold-400 transition-colors mobile-link">Atelier</a>
+        <a href="#services" class="hover:text-gold-400 transition-colors mobile-link">Services</a>
+        <a href="#gallery" class="hover:text-gold-400 transition-colors mobile-link">Portfolio</a>
+        <a href="#reviews" class="hover:text-gold-400 transition-colors mobile-link">Testimonials</a>
+        <a href="#aftercare" class="hover:text-gold-400 transition-colors mobile-link">Aftercare</a>
+        <a href="#contact" class="hover:text-gold-400 transition-colors mobile-link text-gold-400 pt-2 border-t border-white/5">Book Appointment</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <header id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-neutral-900/60 via-obsidian/90 to-obsidian z-0"></div>
+    <div class="absolute inset-0 opacity-30 bg-cover bg-center mix-blend-luminosity filter contrast-125" style="background-image: url('hero_bg.jpg');"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <span class="inline-block py-1.5 px-4 mb-6 text-[11px] font-semibold tracking-[0.3em] uppercase bg-gold-400/10 border border-gold-400/30 text-gold-300 rounded-full backdrop-blur-md">
+        Bespoke Body Artistry Since 2011
+      </span>
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight text-white uppercase leading-none mb-6">
+        Every Pulse <span class="gold-gradient-text block mt-2">Leaves A Mark</span>
+      </h1>
+      <p class="max-w-2xl mx-auto text-neutral-400 text-sm md:text-base tracking-wide font-light leading-relaxed mb-10">
+        Transforming personal narratives into museum-grade skin ink. Operating across our premier custom ateliers in Chennai & Coimbatore.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-gold-400 text-black font-semibold text-xs tracking-[0.2em] uppercase hover:bg-gold-300 transition-all duration-300 shadow-lg shadow-gold-400/10 rounded-sm">
+          Schedule Consultation
+        </a>
+        <a href="#gallery" class="w-full sm:w-auto px-8 py-4 border border-neutral-700 bg-neutral-900/50 backdrop-blur-sm text-neutral-300 font-semibold text-xs tracking-[0.2em] uppercase hover:border-gold-400 hover:text-white transition-all duration-300 rounded-sm">
+          View Masterpieces
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= ABOUT / ATELIER ================= -->
+  <section id="about" class="py-24 md:py-32 px-6 md:px-12 max-w-7xl mx-auto border-t border-neutral-900">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <span class="text-xs font-semibold tracking-[0.3em] uppercase text-gold-400 block mb-3">Our Atelier</span>
+        <h2 class="text-3xl md:text-5xl font-display uppercase tracking-wide text-white mb-8 leading-tight">
+          Where Precision Meets Sacred Expression
+        </h2>
+        <p class="text-neutral-400 text-sm md:text-base leading-relaxed mb-6 font-light">
+          Founded in R.S. Puram, Coimbatore in 2011 and expanded to Chennai, <strong class="text-white font-medium">Inkpulse</strong> was established on the principle that tattoos are enduring milestones of human identity.
+        </p>
+        <p class="text-neutral-400 text-sm md:text-base leading-relaxed mb-8 font-light">
+          We maintain absolute surgical sterilization standards, paired with world-class fine line needles and medical-grade organic pigment arrays to guarantee both safety and longevity.
+        </p>
+
+        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-neutral-900">
+          <div>
+            <span class="text-3xl md:text-4xl font-display font-bold text-white block">14+</span>
+            <span class="text-[11px] tracking-widest uppercase text-neutral-500 mt-1 block">Years Legacy</span>
+          </div>
+          <div>
+            <span class="text-3xl md:text-4xl font-display font-bold text-white block">18k+</span>
+            <span class="text-[11px] tracking-widest uppercase text-neutral-500 mt-1 block">Inked Souls</span>
+          </div>
+          <div>
+            <span class="text-3xl md:text-4xl font-display font-bold text-white block">100%</span>
+            <span class="text-[11px] tracking-widest uppercase text-neutral-500 mt-1 block">Sterile Suite</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div class="overflow-hidden rounded-sm border border-neutral-800">
+          <img src="needle_craft.jpg" alt="Precision rotary needle dipping into carbon pigment" class="w-full h-64 md:h-80 object-cover filter grayscale hover:grayscale-0 transition-all duration-500 hover:scale-105" />
+        </div>
+        <div class="overflow-hidden rounded-sm border border-neutral-800 mt-8">
+          <img src="craft_artist.jpg" alt="Fine line needle craftsmanship on skin" class="w-full h-64 md:h-80 object-cover filter grayscale hover:grayscale-0 transition-all duration-500 hover:scale-105" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section id="services" class="py-24 bg-[#0a0a0a] border-t border-neutral-900">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-semibold tracking-[0.3em] uppercase text-gold-400 block mb-3">Disciplines</span>
+        <h2 class="text-3xl md:text-5xl font-display uppercase tracking-wide text-white">Curated Specialties</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="p-8 bg-cardbg backdrop-blur-md rounded-sm gold-border-glow flex flex-col justify-between">
+          <div>
+            <i class="ph ph-compass-tool text-3xl text-gold-400 mb-6 block"></i>
+            <h3 class="text-xl font-display uppercase text-white mb-3 tracking-wider">Custom Realism</h3>
+            <p class="text-neutral-400 text-sm font-light leading-relaxed">Micro-realistic portraits, hyper-detailed wildlife, and sculptural architecture crafted from original digital renderings.</p>
+          </div>
+          <span class="mt-8 text-xs font-semibold tracking-[0.2em] uppercase text-gold-400/80 flex items-center gap-2">Consultation First <i class="ph ph-arrow-right"></i></span>
+        </div>
+
+        <div class="p-8 bg-cardbg backdrop-blur-md rounded-sm gold-border-glow flex flex-col justify-between">
+          <div>
+            <i class="ph ph-pen-nib text-3xl text-gold-400 mb-6 block"></i>
+            <h3 class="text-xl font-display uppercase text-white mb-3 tracking-wider">Geometric & Sacred</h3>
+            <p class="text-neutral-400 text-sm font-light leading-relaxed">Perfect mathematical symmetry, mandalas, and dotwork stippling designed to complement anatomical contours.</p>
+          </div>
+          <span class="mt-8 text-xs font-semibold tracking-[0.2em] uppercase text-gold-400/80 flex items-center gap-2">Consultation First <i class="ph ph-arrow-right"></i></span>
+        </div>
+
+        <div class="p-8 bg-cardbg backdrop-blur-md rounded-sm gold-border-glow flex flex-col justify-between">
+          <div>
+            <i class="ph ph-drop text-3xl text-gold-400 mb-6 block"></i>
+            <h3 class="text-xl font-display uppercase text-white mb-3 tracking-wider">Fine Line & Watercolor</h3>
+            <p class="text-neutral-400 text-sm font-light leading-relaxed">Soft pigment washes and sub-millimeter single-needle linework for delicate, understated personal statements.</p>
+          </div>
+          <span class="mt-8 text-xs font-semibold tracking-[0.2em] uppercase text-gold-400/80 flex items-center gap-2">Consultation First <i class="ph ph-arrow-right"></i></span>
+        </div>
+
+        <div class="p-8 bg-cardbg backdrop-blur-md rounded-sm gold-border-glow flex flex-col justify-between">
+          <div>
+            <i class="ph ph-sparkle text-3xl text-gold-400 mb-6 block"></i>
+            <h3 class="text-xl font-display uppercase text-white mb-3 tracking-wider">Cover-Ups & Restorations</h3>
+            <p class="text-neutral-400 text-sm font-light leading-relaxed">Technical reclamation of faded or unwanted ink through structural color theory and multi-layer shading.</p>
+          </div>
+          <span class="mt-8 text-xs font-semibold tracking-[0.2em] uppercase text-gold-400/80 flex items-center gap-2">Consultation First <i class="ph ph-arrow-right"></i></span>
+        </div>
+
+        <div class="p-8 bg-cardbg backdrop-blur-md rounded-sm gold-border-glow flex flex-col justify-between">
+          <div>
+            <i class="ph ph-circles-three-plus text-3xl text-gold-400 mb-6 block"></i>
+            <h3 class="text-xl font-display uppercase text-white mb-3 tracking-wider">Precision Body Piercing</h3>
+            <p class="text-neutral-400 text-sm font-light leading-relaxed">Medical-grade titanium and 14k/18k solid gold piercing curated using aseptic needle technique.</p>
+          </div>
+          <span class="mt-8 text-xs font-semibold tracking-[0.2em] uppercase text-gold-400/80 flex items-center gap-2">Walk-ins Welcome <i class="ph ph-arrow-right"></i></span>
+        </div>
+
+        <div class="p-8 bg-cardbg backdrop-blur-md rounded-sm gold-border-glow flex flex-col justify-between">
+          <div>
+            <i class="ph ph-shield-check text-3xl text-gold-400 mb-6 block"></i>
+            <h3 class="text-xl font-display uppercase text-white mb-3 tracking-wider">Private VIP Sessions</h3>
+            <p class="text-neutral-400 text-sm font-light leading-relaxed">Complete studio privacy buyout for day-long backpieces, custom sleeves, and discreet personal sessions.</p>
+          </div>
+          <span class="mt-8 text-xs font-semibold tracking-[0.2em] uppercase text-gold-400/80 flex items-center gap-2">Advance Notice <i class="ph ph-arrow-right"></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4. GALLERY / PORTFOLIO ================= -->
+  <section id="gallery" class="py-24 md:py-32 px-6 md:px-12 max-w-7xl mx-auto border-t border-neutral-900">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div>
+        <span class="text-xs font-semibold tracking-[0.3em] uppercase text-gold-400 block mb-3">Selected Archive</span>
+        <h2 class="text-3xl md:text-5xl font-display uppercase tracking-wide text-white">The Portfolio</h2>
+        <p class="text-neutral-400 text-sm font-light leading-relaxed mt-2">Curated masterworks across realism, Japanese irezumi, fine line, and bespoke jewelry.</p>
+      </div>
+      
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap gap-3">
+        <button class="gallery-filter-btn px-4 py-2 text-xs tracking-widest uppercase border border-gold-400 text-black bg-gold-400 font-semibold transition-all duration-300 rounded-sm" data-filter="all">All Works (16)</button>
+        <button class="gallery-filter-btn px-4 py-2 text-xs tracking-widest uppercase border border-neutral-800 text-neutral-400 hover:text-white transition-all duration-300 rounded-sm" data-filter="blackgrey">Black & Grey (9)</button>
+        <button class="gallery-filter-btn px-4 py-2 text-xs tracking-widest uppercase border border-neutral-800 text-neutral-400 hover:text-white transition-all duration-300 rounded-sm" data-filter="color">Color & Art (4)</button>
+        <button class="gallery-filter-btn px-4 py-2 text-xs tracking-widest uppercase border border-neutral-800 text-neutral-400 hover:text-white transition-all duration-300 rounded-sm" data-filter="piercing">Piercing (3)</button>
+      </div>
+    </div>
+
+    <!-- Gallery Grid (16 Pieces - All Matching & Verified) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- 1. Micro Realism Tiger -->
+      <div class="gallery-item group relative overflow-hidden h-[420px] border border-neutral-800 rounded-sm bg-neutral-950" data-category="blackgrey">
+        <img src="b&g2.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Micro Realism Bengal Tiger" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+          <span class="text-xs text-gold-400 tracking-widest uppercase font-semibold">Micro Realism</span>
+          <p class="text-white font-display text-base uppercase mt-1">Emerald Bengal Tiger</p>
+          <span class="text-[11px] text-neutral-400 mt-0.5 tracking-wider">Forearm Sleeve • Hyper-Realism</span>
+        </div>
+      </div>
+
+      <!-- 2. Vibrant Color Watercolor -->
+      <div class="gallery-item group relative overflow-hidden h-[420px] border border-neutral-800 rounded-sm bg-neutral-950" data-category="color">
+        <img src="watercolor_flora.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Watercolor Botanical Flora" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+          <span class="text-xs text-gold-400 tracking-widest uppercase font-semibold">Watercolor Gradient</span>
+          <p class="text-white font-display text-base uppercase mt-1">Botanical Peony & Blossom</p>
+          <span class="text-[11px] text-neutral-400 mt-0.5 tracking-wider">Forearm & Rib • Multi-Color Wash</span>
+        </div>
+      </div>
+
+      <!-- 3. Japanese Irezumi Koi Sleeve -->
+      <div class="gallery-item group relative overflow-hidden h-[420px] border border-neutral-800 rounded-sm bg-neutral-950" data-category="color">
+        <img src="japanese_koi.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Japanese Irezumi Koi Sleeve" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+          <span class="text-xs text-gold-400 tracking-widest uppercase font-semibold">Japanese Irezumi</span>
+          <p class="text-white font-display text-base uppercase mt-1">Ascending Koi & Sakura</p>
+          <span class="text-[11px] text-neutral-400 mt-0.5 tracking-wider">Full Sleeve • Indigo Waves & Petals</span>
+        </div>
+      </div>
+
+      <!-- 4. Sacred Geometry Mandala -->
+      <div class="gallery-item group relative overflow-hidden h-[420px] border border-neutral-800 rounded-sm bg-neutral-950" data-category="blackgrey">
+        <img src="sacred_mandala.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Sacred Geometry Mandala Dotwork" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+          <span class="text-xs text-gold-400 tracking-widest uppercase font-semibold">Sacred Geometry</span>
+          <p class="text-white font-display text-base uppercase mt-1">Metatron Mandala Dotwork</p>
+          <span class="text-[11px] text-neutral-400 mt-0.5 tracking-wider">Upper Back & Spine • Stippling</span>
+        </div>
+      </div>
+
+      <!-- 5. Gothic Hourglass & Raven -->
+      <div class="gallery-item group relative overflow-hidden h-[420px] border border-neutral-800 rounded-sm bg-neutral-950" data-category="blackgrey">
+        <img src="gothic_raven.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Gothic Raven & Hourglass" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+          <span class="text-xs text-gold-400 tracking-widest uppercase font-semibold">Dark Surrealism</span>
+          <p class="text-white font-display text-base uppercase mt-1">Gothic Hourglass & Raven</p>
+          <span class="text-[11px] text-neutral-400 mt-0.5 tracking-wider">Outer Forearm • Fine Stippling</span>
+        </div>
+      </div>
+
+      <!-- 6. Precision Piercing - 18k Solid Gold -->
+      <div class="gallery-item group relative overflow-hidden h-[420px] border border-neutral-800 rounded-sm bg-neutral-950" data-category="piercing">
+        <img src="piercing_gold.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Curated Gold Ear Piercing Stack" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+          <span class="text-xs text-gold-400 tracking-widest uppercase font-semibold">18k Solid Gold</span>
+          <p class="text-white font-display text-base uppercase mt-1">Curated Ear Piercing Stack</p>
+          <span class="text-[11px] text-neutral-400 mt-0.5 tracking-wider">Daith, Helix & Lobe • Diamond Huggies</span>
+        </div>
+      </div>
+
+      <!-- 7. Dark Illustrative Mythological Falcon & Skull -->
+      <div class="gallery-item group relative overflow-hidden h-[420px] border border-neutral-800 rounded-sm bg-neutral-950" data-category="blackgrey">
+        <img src="b&g1.webp" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Dark Illustrative Falcon Skull" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+          <span class="text-xs text-gold-400 tracking-widest uppercase font-semibold">Dark Illustrative</span>
+          <p class="text-white font-display text-base uppercase mt-1">Mythological Falcon & Skull</p>
+          <span class="text-[11px] text-neutral-400 mt-0.5 tracking-wider">Upper Arm • Black & Grey Stipple</span>
+        </div>
+      </div>
+
+      <!-- 8. Moon Phases & Wild Ferns -->
+      <div class="gallery-item group relative overflow-hidden h-[420px] border border-neutral-800 rounded-sm bg-neutral-950" data-category="blackgrey">
+        <img src="moon_fern.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Moon Phases & Wild Ferns" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+          <span class="text-xs text-gold-400 tracking-widest uppercase font-semibold">Single Needle</span>
+          <p class="text-white font-display text-base uppercase mt-1">Moon Phases & Wild Ferns</p>
+          <span class="text-[11px] text-neutral-400 mt-0.5 tracking-wider">Forearm & Spine • Micro Linework</span>
+        </div>
+      </div>
+
+      <!-- 9. Neo-Traditional Panther & Lotus -->
+      <div class="gallery-item group relative overflow-hidden h-[420px] border border-neutral-800 rounded-sm bg-neutral-950" data-category="color">
+        <img src="neo_traditional.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Neo Traditional Panther & Golden Lotus" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+          <span class="text-xs text-gold-400 tracking-widest uppercase font-semibold">Neo Traditional</span>
+          <p class="text-white font-display text-base uppercase mt-1">Roaring Panther & Lotus</p>
+          <span class="text-[11px] text-neutral-400 mt-0.5 tracking-wider">Arm & Thigh • Jewel Tone Palette</span>
+        </div>
+      </div>
+
+      <!-- 10. Single Needle Anatomical Heart -->
+      <div class="gallery-item group relative overflow-hidden h-[420px] border border-neutral-800 rounded-sm bg-neutral-950" data-category="blackgrey">
+        <img src="fineline_heart.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Single Needle Anatomical Heart" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+          <span class="text-xs text-gold-400 tracking-widest uppercase font-semibold">Single Needle</span>
+          <p class="text-white font-display text-base uppercase mt-1">Botanical Anatomical Heart</p>
+          <span class="text-[11px] text-neutral-400 mt-0.5 tracking-wider">Inner Forearm • Ultra-Fine Needle</span>
+        </div>
+      </div>
+
+      <!-- 11. Titanium Precision Piercing -->
+      <div class="gallery-item group relative overflow-hidden h-[420px] border border-neutral-800 rounded-sm bg-neutral-950" data-category="piercing">
+        <img src="piercing_septum.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Titanium Septum & Nostril Piercing" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+          <span class="text-xs text-gold-400 tracking-widest uppercase font-semibold">Titanium & Gold</span>
+          <p class="text-white font-display text-base uppercase mt-1">Septum & Nostril Clicker</p>
+          <span class="text-[11px] text-neutral-400 mt-0.5 tracking-wider">Aseptic Technique • Implant Grade</span>
+        </div>
+      </div>
+
+      <!-- 12. Wild Peony Botanical -->
+      <div class="gallery-item group relative overflow-hidden h-[420px] border border-neutral-800 rounded-sm bg-neutral-950" data-category="blackgrey">
+        <img src="peony_botanical.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Wild Peony Botanical" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+          <span class="text-xs text-gold-400 tracking-widest uppercase font-semibold">Fine Line Botanical</span>
+          <p class="text-white font-display text-base uppercase mt-1">Blooming Wild Peonies</p>
+          <span class="text-[11px] text-neutral-400 mt-0.5 tracking-wider">Forearm • Detailed Floral Stippling</span>
+        </div>
+      </div>
+
+      <!-- 13. Japanese Samurai Cat Full Backpiece -->
+      <div class="gallery-item group relative overflow-hidden h-[420px] border border-neutral-800 rounded-sm bg-neutral-950" data-category="blackgrey">
+        <img src="samurai_cat.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Ronin Feline & Great Wave" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+          <span class="text-xs text-gold-400 tracking-widest uppercase font-semibold">Japanese Black & Grey</span>
+          <p class="text-white font-display text-base uppercase mt-1">Ronin Feline & Great Wave</p>
+          <span class="text-[11px] text-neutral-400 mt-0.5 tracking-wider">Full Backpiece • Traditional Mastery</span>
+        </div>
+      </div>
+
+      <!-- 14. Amber-Eyed Nocturnal Owl -->
+      <div class="gallery-item group relative overflow-hidden h-[420px] border border-neutral-800 rounded-sm bg-neutral-950" data-category="color">
+        <img src="tattoo_owl.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Amber-Eyed Nocturnal Owl" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+          <span class="text-xs text-gold-400 tracking-widest uppercase font-semibold">Color Realism</span>
+          <p class="text-white font-display text-base uppercase mt-1">Nocturnal Horned Owl</p>
+          <span class="text-[11px] text-neutral-400 mt-0.5 tracking-wider">Forearm • Piercing Amber Eye Contrast</span>
+        </div>
+      </div>
+
+      <!-- 15. Coastal Palms Landscape -->
+      <div class="gallery-item group relative overflow-hidden h-[420px] border border-neutral-800 rounded-sm bg-neutral-950" data-category="blackgrey">
+        <img src="tattoo_beach.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Coastal Palms Landscape" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+          <span class="text-xs text-gold-400 tracking-widest uppercase font-semibold">Scenery Realism</span>
+          <p class="text-white font-display text-base uppercase mt-1">Coastal Palms at Dusk</p>
+          <span class="text-[11px] text-neutral-400 mt-0.5 tracking-wider">Forearm Sleeve • Atmospheric Shading</span>
+        </div>
+      </div>
+
+      <!-- 16. Titanium Tragus Captive Bead -->
+      <div class="gallery-item group relative overflow-hidden h-[420px] border border-neutral-800 rounded-sm bg-neutral-950" data-category="piercing">
+        <img src="piercing_tragus.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Titanium Tragus Captive Bead Piercing" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
+          <span class="text-xs text-gold-400 tracking-widest uppercase font-semibold">Titanium Grade 23</span>
+          <p class="text-white font-display text-base uppercase mt-1">Tragus Captive Bead Ring</p>
+          <span class="text-[11px] text-neutral-400 mt-0.5 tracking-wider">Cartilage Suite • Mirror Polish</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+        <!-- ================= 5. REVIEWS & CLIENT TESTIMONIALS ================= -->
+  <section id="reviews" class="py-24 md:py-32 bg-obsidian border-t border-neutral-900 relative">
+    <div class="max-w-5xl mx-auto px-6 md:px-12">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-semibold tracking-[0.3em] uppercase text-gold-400 block mb-3">Client Testimonials</span>
+        <h2 class="text-3xl md:text-5xl font-display uppercase tracking-wide text-white">REVIEWS</h2>
+        <div class="h-[1px] w-12 bg-gold-400 mx-auto mt-4 mb-6"></div>
+        <p class="text-neutral-400 text-sm md:text-base font-light leading-relaxed">
+          Real stories and authentic craft from our cherished clients across Chennai, Coimbatore, and beyond.
+        </p>
+      </div>
+
+      <!-- Testimonials Alternating List -->
+      <div class="flex flex-col gap-10">
+
+        <!-- Review 1 (One: Border Left + Border Bottom) -->
+        <div class="bg-[#0e0e0e] p-6 md:p-8 rounded-sm shadow-xl transition-all duration-300 hover:bg-[#141414]" style="border-left: 5px solid #D4AF37; border-bottom: 1px solid rgba(212, 175, 55, 0.35);">
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <!-- Tattoo Photo Left -->
+            <div class="w-full md:w-56 shrink-0 flex justify-center">
+              <div class="relative overflow-hidden rounded-sm border border-neutral-800 shadow-md group">
+                <img src="image00138.jpeg" alt="Tattoo craft on forearm by Inkpulse" class="w-48 h-48 md:w-52 md:h-52 object-cover object-center transition-transform duration-500 group-hover:scale-105">
+              </div>
+            </div>
+            <!-- Review Text Right -->
+            <div class="flex-1 text-center md:text-left flex flex-col justify-center">
+              <p class="text-neutral-200 text-base md:text-lg font-light leading-relaxed italic mb-6">
+                "Good place for getting tattooed. Krishnan patiently explained us regarding the process of getting a tattoo."
+              </p>
+              <div class="text-center">
+                <p class="text-sm tracking-widest uppercase text-neutral-300 font-medium">
+                  ~ <span class="text-gold-400 font-display font-semibold tracking-[0.18em]">KARTHIK</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 (Two: Border Right + Border Bottom) -->
+        <div class="bg-[#0e0e0e] p-6 md:p-8 rounded-sm shadow-xl transition-all duration-300 hover:bg-[#141414]" style="border-right: 5px solid #D4AF37; border-bottom: 1px solid rgba(212, 175, 55, 0.35);">
+          <div class="flex flex-col-reverse md:flex-row items-center gap-8">
+            <!-- Review Text Left -->
+            <div class="flex-1 text-center md:text-left flex flex-col justify-center">
+              <p class="text-neutral-200 text-base md:text-lg font-light leading-relaxed italic mb-6">
+                "greatt work by krish and best place in chennai for permanent tattoo. Ambiance and hygiene are excellent."
+              </p>
+              <div class="text-center">
+                <p class="text-sm tracking-widest uppercase text-neutral-300 font-medium">
+                  ~ <span class="text-gold-400 font-display font-semibold tracking-[0.18em]">AARTEE SINGH</span>
+                </p>
+              </div>
+            </div>
+            <!-- Tattoo Photo Right -->
+            <div class="w-full md:w-56 shrink-0 flex justify-center">
+              <div class="relative overflow-hidden rounded-sm border border-neutral-800 shadow-md group">
+                <img src="image00132.jpeg" alt="Owl tattoo artwork on shoulder by Inkpulse" class="w-48 h-48 md:w-52 md:h-52 object-cover object-center transition-transform duration-500 group-hover:scale-105">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 (One: Border Left + Border Bottom) -->
+        <div class="bg-[#0e0e0e] p-6 md:p-8 rounded-sm shadow-xl transition-all duration-300 hover:bg-[#141414]" style="border-left: 5px solid #D4AF37; border-bottom: 1px solid rgba(212, 175, 55, 0.35);">
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <!-- Tattoo Photo Left -->
+            <div class="w-full md:w-56 shrink-0 flex justify-center">
+              <div class="relative overflow-hidden rounded-sm border border-neutral-800 shadow-md group">
+                <img src="image00126.jpeg" alt="Trishul and Om spiritual tattoo on bicep by Inkpulse" class="w-48 h-48 md:w-52 md:h-52 object-cover object-center transition-transform duration-500 group-hover:scale-105">
+              </div>
+            </div>
+            <!-- Review Text Right -->
+            <div class="flex-1 text-center md:text-left flex flex-col justify-center">
+              <p class="text-neutral-200 text-base md:text-lg font-light leading-relaxed italic mb-6">
+                "The tattoo came out just as imagined- I love it!! I would recommend this place to all the tattoo lovers."
+              </p>
+              <div class="text-center">
+                <p class="text-sm tracking-widest uppercase text-neutral-300 font-medium">
+                  ~ <span class="text-gold-400 font-display font-semibold tracking-[0.18em]">SWAPNA KUKKALA</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 4 (Two: Border Right + Border Bottom) -->
+        <div class="bg-[#0e0e0e] p-6 md:p-8 rounded-sm shadow-xl transition-all duration-300 hover:bg-[#141414]" style="border-right: 5px solid #D4AF37; border-bottom: 1px solid rgba(212, 175, 55, 0.35);">
+          <div class="flex flex-col-reverse md:flex-row items-center gap-8">
+            <!-- Review Text Left -->
+            <div class="flex-1 text-center md:text-left flex flex-col justify-center">
+              <p class="text-neutral-200 text-base md:text-lg font-light leading-relaxed italic mb-6">
+                "The artist, Krish is great at his work and brought out exactly what I had in my mind. Love the place:)"
+              </p>
+              <div class="text-center">
+                <p class="text-sm tracking-widest uppercase text-neutral-300 font-medium">
+                  ~ <span class="text-gold-400 font-display font-semibold tracking-[0.18em]">SUMATHI MARIAPPAN</span>
+                </p>
+              </div>
+            </div>
+            <!-- Tattoo Photo Right -->
+            <div class="w-full md:w-56 shrink-0 flex justify-center">
+              <div class="relative overflow-hidden rounded-sm border border-neutral-800 shadow-md group">
+                <img src="image00120.jpeg" alt="Fine line and shaded tattoo piece by Inkpulse" class="w-48 h-48 md:w-52 md:h-52 object-cover object-center transition-transform duration-500 group-hover:scale-105">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 5 (One: Border Left + Border Bottom) -->
+        <div class="bg-[#0e0e0e] p-6 md:p-8 rounded-sm shadow-xl transition-all duration-300 hover:bg-[#141414]" style="border-left: 5px solid #D4AF37; border-bottom: 1px solid rgba(212, 175, 55, 0.35);">
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <!-- Tattoo Photo Left -->
+            <div class="w-full md:w-56 shrink-0 flex justify-center">
+              <div class="relative overflow-hidden rounded-sm border border-neutral-800 shadow-md group">
+                <img src="image00105.jpeg" alt="Custom tattoo piece by Inkpulse" class="w-48 h-48 md:w-52 md:h-52 object-cover object-center transition-transform duration-500 group-hover:scale-105">
+              </div>
+            </div>
+            <!-- Review Text Right -->
+            <div class="flex-1 text-center md:text-left flex flex-col justify-center">
+              <p class="text-neutral-200 text-base md:text-lg font-light leading-relaxed italic mb-6">
+                "Definitely the best places to ink your body in Chennai. The place is really sophisticated and Krish is really professional in his approach."
+              </p>
+              <div class="text-center">
+                <p class="text-sm tracking-widest uppercase text-neutral-300 font-medium">
+                  ~ <span class="text-gold-400 font-display font-semibold tracking-[0.18em]">BIMAL VISHNU</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 6 (Two: Border Right + Border Bottom) -->
+        <div class="bg-[#0e0e0e] p-6 md:p-8 rounded-sm shadow-xl transition-all duration-300 hover:bg-[#141414]" style="border-right: 5px solid #D4AF37; border-bottom: 1px solid rgba(212, 175, 55, 0.35);">
+          <div class="flex flex-col-reverse md:flex-row items-center gap-8">
+            <!-- Review Text Left -->
+            <div class="flex-1 text-center md:text-left flex flex-col justify-center">
+              <p class="text-neutral-200 text-base md:text-lg font-light leading-relaxed italic mb-6">
+                "Got inked at inkpulse.. first tattoo... krish got talent, it was an impromptu design.. suggestions, ideas, creativity & talent... one full package he is..."
+              </p>
+              <div class="text-center">
+                <p class="text-sm tracking-widest uppercase text-neutral-300 font-medium">
+                  ~ <span class="text-gold-400 font-display font-semibold tracking-[0.18em]">VIBIN SHANKAR</span>
+                </p>
+              </div>
+            </div>
+            <!-- Tattoo Photo Right -->
+            <div class="w-full md:w-56 shrink-0 flex justify-center">
+              <div class="relative overflow-hidden rounded-sm border border-neutral-800 shadow-md group">
+                <img src="image00083.jpeg" alt="Artistic script tattoo on forearm by Inkpulse" class="w-48 h-48 md:w-52 md:h-52 object-cover object-center transition-transform duration-500 group-hover:scale-105">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 7 (One: Border Left + Border Bottom) -->
+        <div class="bg-[#0e0e0e] p-6 md:p-8 rounded-sm shadow-xl transition-all duration-300 hover:bg-[#141414]" style="border-left: 5px solid #D4AF37; border-bottom: 1px solid rgba(212, 175, 55, 0.35);">
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <!-- Tattoo Photo Left -->
+            <div class="w-full md:w-56 shrink-0 flex justify-center">
+              <div class="relative overflow-hidden rounded-sm border border-neutral-800 shadow-md group">
+                <img src="image00085.jpeg" alt="Original sleeve tattoo design by Inkpulse" class="w-48 h-48 md:w-52 md:h-52 object-cover object-center transition-transform duration-500 group-hover:scale-105">
+              </div>
+            </div>
+            <!-- Review Text Right -->
+            <div class="flex-1 text-center md:text-left flex flex-col justify-center">
+              <p class="text-neutral-200 text-base md:text-lg font-light leading-relaxed italic mb-6">
+                "One stop for any tattoo design.The important thing is meeting your expectation and to feel happy and satisfied with the design."
+              </p>
+              <div class="text-center">
+                <p class="text-sm tracking-widest uppercase text-neutral-300 font-medium">
+                  ~ <span class="text-gold-400 font-display font-semibold tracking-[0.18em]">PREETI HELIA</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 8 (Two: Border Right + Border Bottom) -->
+        <div class="bg-[#0e0e0e] p-6 md:p-8 rounded-sm shadow-xl transition-all duration-300 hover:bg-[#141414]" style="border-right: 5px solid #D4AF37; border-bottom: 1px solid rgba(212, 175, 55, 0.35);">
+          <div class="flex flex-col-reverse md:flex-row items-center gap-8">
+            <!-- Review Text Left -->
+            <div class="flex-1 text-center md:text-left flex flex-col justify-center">
+              <p class="text-neutral-200 text-base md:text-lg font-light leading-relaxed italic mb-6">
+                "Wonderfull studio. The biggest that i have seen in india. Have 5 tattoos on me and went for the 6th with inkpulse."
+              </p>
+              <div class="text-center">
+                <p class="text-sm tracking-widest uppercase text-neutral-300 font-medium">
+                  ~ <span class="text-gold-400 font-display font-semibold tracking-[0.18em]">SAMYUKTHA RAMESH</span>
+                </p>
+              </div>
+            </div>
+            <!-- Tattoo Photo Right -->
+            <div class="w-full md:w-56 shrink-0 flex justify-center">
+              <div class="relative overflow-hidden rounded-sm border border-neutral-800 shadow-md group">
+                <img src="inkpulse1.jpg" alt="Fine detailed ink art by Inkpulse" class="w-48 h-48 md:w-52 md:h-52 object-cover object-center transition-transform duration-500 group-hover:scale-105">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 6. AFTERCARE ================= -->
+  <section id="aftercare" class="py-24 md:py-32 px-6 md:px-12 max-w-7xl mx-auto border-t border-neutral-900">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-semibold tracking-[0.3em] uppercase text-gold-400 block mb-3">Preservation Protocol</span>
+      <h2 class="text-3xl md:text-5xl font-display uppercase tracking-wide text-white mb-6">Healing is 50% of the Art</h2>
+      <p class="text-neutral-400 text-sm md:text-base font-light leading-relaxed">
+        Your body art is an investment. Strictly adhere to our clinical aftercare regimen during the primary 14-day healing cycle to preserve pigmentation crispness.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="p-8 md:p-10 bg-cardbg border border-emerald-500/20 rounded-sm">
+        <h3 class="text-lg font-display uppercase tracking-wider text-emerald-400 flex items-center gap-3 mb-6">
+          <i class="ph ph-check-circle text-2xl"></i> Essential Rituals (Do's)
+        </h3>
+        <ul class="space-y-4 text-sm text-neutral-300 font-light leading-relaxed">
+          <li class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-1">•</span>
+            <span>Remove protective second-skin dressing gently under warm running water after 3 to 4 hours.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-1">•</span>
+            <span>Clean exclusively with fragrance-free, antibacterial soap using clean bare hands.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-1">•</span>
+            <span>Apply a razor-thin layer of authorized tattoo balm 3 times daily. Keep it hydrated, never soggy.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-1">•</span>
+            <span>Wear loose, breathable 100% cotton garments to minimize mechanical friction against fresh ink.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="p-8 md:p-10 bg-cardbg border border-rose-500/20 rounded-sm">
+        <h3 class="text-lg font-display uppercase tracking-wider text-rose-400 flex items-center gap-3 mb-6">
+          <i class="ph ph-prohibit text-2xl"></i> Strict Restrictions (Don'ts)
+        </h3>
+        <ul class="space-y-4 text-sm text-neutral-300 font-light leading-relaxed">
+          <li class="flex items-start gap-3">
+            <span class="text-rose-400 mt-1">•</span>
+            <span>Never submerge your tattoo in standing bodies of water (pools, tubs, ocean) for 3 weeks minimum.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-rose-400 mt-1">•</span>
+            <span>Do not pick, scratch, or peel skin flakes. Premature flaking extracts the pigment underneath.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-rose-400 mt-1">•</span>
+            <span>Avoid direct sun exposure and tanning beds during the first month. Use SPF 50+ only once fully healed.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-rose-400 mt-1">•</span>
+            <span>Do not re-bandage the tattoo after the initial wrap is discarded. The skin requires oxygen to heal.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 7. CONTACT & RESERVATION ================= -->
+  <section id="contact" class="py-24 bg-[#0a0a0a] border-t border-neutral-900">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        
+        <div class="lg:col-span-5 flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-semibold tracking-[0.3em] uppercase text-gold-400 block mb-3">Reservations</span>
+            <h2 class="text-3xl md:text-5xl font-display uppercase tracking-wide text-white mb-8">Begin Your Consultation</h2>
+            <p class="text-neutral-400 text-sm font-light leading-relaxed mb-10">
+              Every project starts with an in-depth creative dialogue. Fill out your specifications and our studio will respond within 24 hours.
+            </p>
+
+            <div class="space-y-8">
+              <div class="p-6 bg-obsidian border border-neutral-800 rounded-sm gold-border-glow">
+                <span class="text-xs tracking-widest uppercase font-semibold text-gold-400 block mb-2">Chennai Atelier</span>
+                <p class="text-sm text-neutral-300 font-light leading-relaxed">No 18, 1st Main Road, West Kamaraj Nagar, Thiruvanmiyur, Chennai 600041</p>
+                <div class="mt-4 flex gap-4 text-xs tracking-wider text-neutral-400 uppercase">
+                  <span>+91 98840 25180</span> • <span>chennai@inkpulse.in</span>
+                </div>
+              </div>
+
+              <div class="p-6 bg-obsidian border border-neutral-800 rounded-sm gold-border-glow">
+                <span class="text-xs tracking-widest uppercase font-semibold text-gold-400 block mb-2">Coimbatore Atelier</span>
+                <p class="text-sm text-neutral-300 font-light leading-relaxed">1299/4, S T V Nagar, Avinashi Road, Nava India, Coimbatore 641004</p>
+                <div class="mt-4 flex gap-4 text-xs tracking-wider text-neutral-400 uppercase">
+                  <span>+91 98840 25180</span> • <span>cbe@inkpulse.in</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 bg-obsidian p-8 md:p-12 border border-neutral-800 rounded-sm shadow-2xl">
+          <form onsubmit="handleFormSubmit(event)" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs uppercase tracking-widest text-neutral-400 mb-2">Full Name</label>
+                <input type="text" required placeholder="e.g. Rahul Varma" class="w-full bg-neutral-900 border border-neutral-800 px-4 py-3.5 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-gold-400 transition-colors rounded-sm" />
+              </div>
+              <div>
+                <label class="block text-xs uppercase tracking-widest text-neutral-400 mb-2">Phone Number</label>
+                <input type="tel" required placeholder="+91 00000 00000" class="w-full bg-neutral-900 border border-neutral-800 px-4 py-3.5 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-gold-400 transition-colors rounded-sm" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs uppercase tracking-widest text-neutral-400 mb-2">Email Address</label>
+                <input type="email" required placeholder="name@domain.com" class="w-full bg-neutral-900 border border-neutral-800 px-4 py-3.5 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-gold-400 transition-colors rounded-sm" />
+              </div>
+              <div>
+                <label class="block text-xs uppercase tracking-widest text-neutral-400 mb-2">Select Studio Location</label>
+                <select class="w-full bg-neutral-900 border border-neutral-800 px-4 py-3.5 text-sm text-neutral-300 focus:outline-none focus:border-gold-400 transition-colors rounded-sm">
+                  <option value="chennai">Chennai Atelier (Thiruvanmiyur)</option>
+                  <option value="coimbatore">Coimbatore Atelier (Nava India)</option>
+                  <option value="piercing">Specialized Piercing Suite</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs uppercase tracking-widest text-neutral-400 mb-2">Concept Description & Dimensions</label>
+              <textarea rows="4" required placeholder="Describe your tattoo vision, placement on body, style preferences, and approximate size in inches..." class="w-full bg-neutral-900 border border-neutral-800 px-4 py-3.5 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-gold-400 transition-colors rounded-sm"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 bg-gold-400 text-black font-semibold text-xs tracking-[0.25em] uppercase hover:bg-gold-300 transition-all duration-300 rounded-sm shadow-lg shadow-gold-400/20">
+              Submit Session Request
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="py-12 border-t border-neutral-900 text-center text-xs tracking-[0.2em] text-neutral-500 uppercase bg-[#050505]">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <span>© INKPULSE TATTOO ATELIER. ALL RIGHTS RESERVED.</span>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-gold-400 transition-colors">Instagram</a>
+        <a href="#" class="hover:text-gold-400 transition-colors">Pinterest</a>
+        <a href="#" class="hover:text-gold-400 transition-colors">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <div class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-3.5 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center" aria-label="WhatsApp">
+    <i class="ph-fill ph-whatsapp-logo text-2xl"></i>
+  </div>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    // Mobile Drawer Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Gallery Category Filtering
+    const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-gold-400', 'text-black', 'border-gold-400');
+          b.classList.add('border-neutral-800', 'text-neutral-400');
+        });
+
+        btn.classList.add('bg-gold-400', 'text-black', 'border-gold-400');
+        btn.classList.remove('border-neutral-800', 'text-neutral-400');
+
+        const filter = btn.getAttribute('data-filter');
+
+        galleryItems.forEach(item => {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Form Demo Trigger
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      alert('Session request submitted successfully! Our lead artist will contact you within 24 hours.');
+    }
+  </script>
+</body>
+</html>
