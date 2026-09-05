@@ -3,5 +3,13 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 
-# Removed artist portraits (per request)
-*.jpeg
+# Removed individual portrait headshots
+gunabalan.jpeg
+hariprasath.jpeg
+keshavraj.jpeg
+krishnahari.jpeg
+lakshamana narayanan.jpeg
+meenatchisundaram.jpeg
+mohameedasif.jpeg
+mukilan.jpeg
+sivashankaran.jpeg
