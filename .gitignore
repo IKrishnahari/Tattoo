@@ -3,6 +3,7 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 
+<<<<<<< HEAD
 # Removed individual portrait headshots
 gunabalan.jpeg
 hariprasath.jpeg
@@ -13,3 +14,5 @@ meenatchisundaram.jpeg
 mohameedasif.jpeg
 mukilan.jpeg
 sivashankaran.jpeg
+=======
+>>>>>>> faf56ecbb176275f11260a71d3c748fe38e6ac2a

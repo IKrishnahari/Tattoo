@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "inkpulse-tattoo",
+  "cleanUrls": true,
+  "routes": [
+    {
+      "src": "/images/(.*)",
+      "dest": "/images/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
